@@ -355,8 +355,6 @@ define(function (require) {
       };
 
       _.forOwn(TimeBuckets.prototype, function (fn, prop) {
-        if (prop[0] === '_') return;
-
         if (breakers.hasOwnProperty(prop)) {
           desc[prop] = cacheBreaker(prop);
         } else {
